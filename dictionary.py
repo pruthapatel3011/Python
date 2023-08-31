@@ -1,22 +1,32 @@
-words = set()
+capitals ={"USA":"Washington D.C",
+           "INDIA" : "NEW DELHI",
+           "CHINA":"BEIJING",
+           "RUSSIA":"MOSCOW"}
 
-def check(word):
+#print(dir(capitals))
+#print(help(capitals))
+#print(capitals.get("JAPAN"))
 
-    if word.lower() in words:
-        return True
-    else:
-        return False
+if capitals.get("RUSSIA"):
+    print("that capital exists")
+else:
+    print("that capital dosen't exists")
 
-    def load(dictionary):
-        file=open(dictionary,"r")
-        for line in file:
-            word =line.rstrip()
-            words.add(word)
-            file.close()
-            return True
+capitals.update({"germany":"berlin"})
+capitals.update({"USA":"DETROIT"})
+capitals.pop("CHINA")
+capitals.popitem()
+capitals.clear()
 
-        def size():
-            return len(words)
+keys=capitals.keys()
 
-        def unload():
-            return true
+for key in capitals.keys():
+    print(key)
+
+values=capitals.values()
+for value in capitals.values():
+    print(value)
+
+items=capitals.items()
+for key, value in capitals.items():
+    print(f"{key}:{value}")
